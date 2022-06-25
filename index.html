@@ -18,11 +18,16 @@
       <div class="container">
         <h1>Generate a <br /><span>random password</span></h1>
         <p>Never use an insecure password</p>
-        <button id="btn">Generate passwords</button>
+        <div class="password-length">
+          <label>Enter the password length (Min 6 and Max 15)</label>
+          <input type="text" id="length" />
+          <p id="error"></p>
+        </div>
+        <button id="btn" onClick="getValue()">Generate passwords</button>
         <hr />
         <div class="passwords">
-          <p class="passwordOne"></p>
-          <p class="passwordTwo"></p>
+          <p id="passwordOne" class="active">••••••••••••</p>
+          <p id="passwordTwo" class="active">••••••••••••</p>
         </div>
       </div>
     </main>

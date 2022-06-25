@@ -15,8 +15,8 @@ main {
 }
 
 .container {
-  width: 400px;
-  height: 400px;
+  width: 550px;
+  height: auto;
   background-color: #1f2937;
   padding: 1.5em;
   color: #fff;
@@ -24,16 +24,14 @@ main {
 }
 
 .container > * {
+  margin: 0.5em 0;
+}
+
+.password-length {
+  margin: 2em 0;
+}
+.password-length > * {
   margin: 1em 0;
-}
-
-/* Typography */
-span {
-  color: #10b981;
-}
-
-h1 {
-  font-weight: 700;
 }
 
 button {
@@ -46,6 +44,40 @@ button {
   cursor: pointer;
 }
 
+#error {
+  color: #10b981;
+  margin: 0;
+}
+
 hr {
   opacity: 0.1;
+}
+
+input {
+  outline: none;
+}
+
+.passwords {
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  padding: 0.5em 1em;
+  background-color: #10b981;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.inactive {
+    background-color: #1f2937;
+}
+
+/* Typography */
+span {
+  color: #10b981;
+}
+
+h1 {
+  font-weight: 700;
 }

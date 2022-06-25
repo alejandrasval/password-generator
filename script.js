@@ -91,3 +91,38 @@ const characters = [
   "?",
   "/",
 ];
+
+let btn = document.getElementById("btn");
+let passwordOne = document.getElementById("passwordOne");
+let passwordTwo = document.getElementById("passwordTwo");
+let errorMessage = document.getElementById("error");
+
+const getValue = () => {
+  let inputValue = document.getElementById("length").value;
+  document.getElementById("length").innerHTML = inputValue;
+  if (inputValue >= 6 && inputValue < 16) {
+    passwordOne.classList.add("active");
+    passwordTwo.classList.add("active");
+    return inputValue;
+  } else {
+    errorMessage.innerHTML = "Invalid number. Min 6 and max 15 characters.⚠️";
+    passwordOne.classList.add("inactive");
+    passwordTwo.classList.add("inactive");
+  }
+};
+
+function generateRandomNum(array) {
+  const num = Math.floor(Math.random() * array.length);
+  return num;
+}
+
+btn.addEventListener("click", function () {
+  password1 = [];
+  password2 = [];
+  for (let index = 0; index < getValue(); index++) {
+    password1.push(characters[generateRandomNum(characters)]);
+    password2.push(characters[generateRandomNum(characters)]);
+  }
+  passwordOne.innerHTML = password1;
+  passwordTwo.innerHTML = password2;
+});
