@@ -103,6 +103,8 @@ const getValue = () => {
   if (inputValue >= 6 && inputValue < 16) {
     passwordOne.classList.add("active");
     passwordTwo.classList.add("active");
+    passwordOne.classList.remove("inactive");
+    passwordTwo.classList.remove("inactive");
     return inputValue;
   } else {
     errorMessage.innerHTML = "Invalid number. Min 6 and max 15 characters.⚠️";
