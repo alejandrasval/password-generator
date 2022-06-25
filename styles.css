@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Layout */
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background-color: #1f2937;
+  padding: 1.5em;
+  color: #fff;
+  border-radius: 1em;
+}
+
+.container > * {
+  margin: 1em 0;
+}
+
+/* Typography */
+span {
+  color: #10b981;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+button {
+  background-color: #10b981;
+  padding: 0.5em 1em;
+  border: none;
+  color: inherit;
+  font-size: 0.8rem;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+hr {
+  opacity: 0.1;
+}
