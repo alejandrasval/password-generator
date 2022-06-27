@@ -125,6 +125,6 @@ btn.addEventListener("click", function () {
     password1.push(characters[generateRandomNum(characters)]);
     password2.push(characters[generateRandomNum(characters)]);
   }
-  passwordOne.innerHTML = password1;
-  passwordTwo.innerHTML = password2;
+  passwordOne.innerHTML = password1.join("");
+  passwordTwo.innerHTML = password2.join("");
 });
